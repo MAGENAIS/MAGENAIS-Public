@@ -41,5 +41,9 @@ This repository contains only the built, production application — it is a depl
 ## Contact
 
 **Project:** MAGENAIS
+
 **Email:** Magenais.Wisdom@gmail.com
+
 **GitHub:** https://github.com/MAGENAIS/MAGENAIS-Public
+
+**Web Address:** https://magenais.github.io/MAGENAIS-Public/
