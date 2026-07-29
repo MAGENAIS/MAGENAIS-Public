@@ -1,0 +1,774 @@
+MAGENAIS PROPRIETARY SOFTWARE LICENSE
+
+Version 2.0
+Last Updated: July 2026
+
+Copyright © 2026 Mehdi Alireza.
+All Rights Reserved.
+
+======================================================================
+IMPORTANT LEGAL NOTICE
+======================================================================
+
+MAGENAIS IS PROPRIETARY SOFTWARE.
+
+MAGENAIS IS NOT OPEN SOURCE.
+
+THIS SOFTWARE IS LICENSED, NOT SOLD.
+
+ALL RIGHTS NOT EXPRESSLY GRANTED ARE RESERVED.
+
+BY ACCESSING, VIEWING, DOWNLOADING, CLONING, INSTALLING, COPYING,
+POSSESSING, EXECUTING, MODIFYING, OR OTHERWISE USING THE SOFTWARE OR
+ANY PORTION OF IT, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD,
+AND AGREE TO BE LEGALLY BOUND BY THE TERMS OF THIS LICENSE.
+
+IF YOU DO NOT AGREE TO THESE TERMS, YOU MUST IMMEDIATELY CEASE ALL USE
+OF THE SOFTWARE AND PERMANENTLY DELETE EVERY COPY IN YOUR POSSESSION
+OR CONTROL.
+
+======================================================================
+1. DEFINITIONS
+======================================================================
+
+For the purposes of this License:
+
+"Software" means the MAGENAIS platform in its entirety, including,
+without limitation:
+
+• Source Code
+• Object Code
+• Executable Files
+• Documentation
+• Architecture
+• Software Design
+• System Design
+• User Interface
+• User Experience
+• Graphics
+• Icons
+• Branding
+• Logos
+• AI Pipelines
+• AI Agents
+• AI Workflows
+• Prompt Templates
+• Prompt Libraries
+• Algorithms
+• Data Structures
+• Models
+• Configuration Files
+• Build Scripts
+• APIs
+• SDKs
+• Plugins
+• Extensions
+• Examples
+• Samples
+• Tests
+• Assets
+• Diagrams
+• Specifications
+• Roadmaps
+• Technical Documentation
+• Research Materials
+• Any Updates
+• Any Improvements
+• Any Future Versions
+• Any Derivative Materials
+• Any Portion of the Above
+
+"Owner" means:
+
+Mehdi Alireza
+
+including any legal successor,
+assignee,
+or organization that acquires ownership of MAGENAIS.
+
+"Documentation" includes all written, graphical,
+electronic, online, offline,
+or embedded documentation distributed with the Software.
+
+"Derivative Work" means any software,
+product,
+service,
+architecture,
+framework,
+workflow,
+plugin,
+API,
+SDK,
+documentation,
+or other work based upon,
+derived from,
+or substantially similar to
+any portion of the Software.
+
+======================================================================
+2. OWNERSHIP
+======================================================================
+
+MAGENAIS and all associated intellectual property are and shall remain
+the exclusive property of the Owner.
+
+Nothing contained in this License transfers ownership of:
+
+• Copyright
+• Patent Rights
+• Trade Secrets
+• Trademarks
+• Service Marks
+• Design Rights
+• Database Rights
+• Know-How
+• Confidential Information
+• Source Code
+• Documentation
+• Architecture
+• Software Design
+• Brand Identity
+• Any other Intellectual Property Rights
+
+All rights, title, and interest remain exclusively with the Owner.
+
+======================================================================
+3. NO IMPLIED LICENSE
+======================================================================
+
+Nothing contained in this License shall be interpreted as granting
+any license, ownership, right, title, or interest by implication,
+estoppel, exhaustion, waiver, or otherwise.
+
+Any permission to use the Software must be expressly granted through
+a separate written agreement signed by the Owner.
+
+Publication of the Software,
+its availability,
+or access to the repository
+does not grant any permission beyond those explicitly stated.
+
+======================================================================
+4. RESERVATION OF RIGHTS
+======================================================================
+
+The Owner expressly reserves every right not specifically granted
+under this License.
+
+No permission shall ever be inferred from:
+
+• Publication
+• Distribution
+• Repository Visibility
+• Source Availability
+• Documentation Availability
+• Demonstrations
+• Marketing Materials
+• Public Discussions
+• Issue Tracking
+• Screenshots
+• Technical Articles
+
+All rights remain reserved.
+
+======================================================================
+5. COPYRIGHT
+======================================================================
+
+Copyright © 2026 Mehdi Alireza.
+
+All Rights Reserved.
+
+The Software is protected by international copyright laws,
+international treaties,
+and all applicable intellectual property laws.
+
+Unauthorized copying,
+distribution,
+modification,
+publication,
+or commercial exploitation is strictly prohibited.
+
+======================================================================
+6. LICENSE GRANT
+======================================================================
+
+Except where expressly authorized through a separate written agreement,
+NO LICENSE is granted to any individual,
+organization,
+government,
+educational institution,
+or commercial entity.
+
+Possession of the Software,
+or access to any repository containing the Software,
+does NOT grant permission to:
+
+• Use
+• Execute
+• Modify
+• Publish
+• Redistribute
+• Mirror
+• Fork
+• Merge
+• Translate
+• Host
+• Rent
+• Lease
+• Sell
+• Sublicense
+• Commercialize
+• Create Derivative Works
+• Provide the Software as a Service (SaaS)
+• Integrate into another product
+• Offer managed services
+• Create competing products
+
+Any such activity requires prior written authorization from the Owner.
+======================================================================
+7. RESTRICTIONS
+======================================================================
+
+Except where expressly authorized through a separate written agreement
+signed by the Owner, you may NOT, directly or indirectly:
+
+• Copy the Software.
+• Duplicate any portion of the Software.
+• Modify the Software.
+• Adapt the Software.
+• Translate the Software.
+• Localize the Software.
+• Merge the Software with another work.
+• Publish the Software.
+• Redistribute the Software.
+• Mirror any repository containing the Software.
+• Fork the repository.
+• Host the Software.
+• Upload the Software to third-party services.
+• Provide the Software as a hosted service.
+• Provide Software-as-a-Service (SaaS).
+• Provide Platform-as-a-Service (PaaS).
+• Provide AI-as-a-Service (AIaaS).
+• Rent the Software.
+• Lease the Software.
+• Sell the Software.
+• Sublicense the Software.
+• Transfer the Software.
+• Assign the Software.
+• Commercialize the Software.
+• Create derivative works.
+• Create substantially similar software.
+• Remove copyright notices.
+• Remove trademark notices.
+• Remove proprietary notices.
+• Obscure ownership information.
+• Circumvent technical protections.
+• Circumvent licensing mechanisms.
+• Bypass security measures.
+• Assist any third party in performing any prohibited activity.
+
+Any activity not expressly authorized by the Owner is prohibited.
+
+======================================================================
+8. CONFIDENTIAL INFORMATION
+======================================================================
+
+The Software contains confidential and proprietary information,
+including but not limited to:
+
+• Source Code
+• Software Architecture
+• Design Patterns
+• Internal APIs
+• Algorithms
+• AI Workflows
+• AI Pipelines
+• Prompt Engineering Techniques
+• Provider Routing Logic
+• Plugin Architecture
+• Documentation
+• Technical Specifications
+• Research Materials
+• Development Methodologies
+• Business Strategies
+
+You agree to maintain the confidentiality of all proprietary
+information contained within the Software.
+
+Unauthorized disclosure, publication, or distribution of confidential
+information is strictly prohibited.
+
+======================================================================
+9. AI TRAINING RESTRICTIONS
+======================================================================
+
+The Software, in whole or in part, including but not limited to its:
+
+• Source Code
+• Documentation
+• Architecture
+• Algorithms
+• Workflows
+• Prompts
+• Prompt Libraries
+• APIs
+• SDKs
+• User Interface
+• Technical Documentation
+• Examples
+• Samples
+• Metadata
+• Outputs
+• Configuration Files
+• Build Scripts
+• Design Documents
+
+may NOT be used, directly or indirectly, for:
+
+• AI Model Training
+• Foundation Model Training
+• Pre-training
+• Fine-tuning
+• Reinforcement Learning
+• Reinforcement Learning from Human Feedback (RLHF)
+• Knowledge Distillation
+• Retrieval Dataset Construction
+• Embedding Generation
+• Dataset Extraction
+• Synthetic Dataset Generation
+• Machine Learning Research
+• Benchmark Dataset Creation
+• Competitive Evaluation
+• Capability Replication
+• Automated Code Generation
+• Model Evaluation intended to reproduce the Software
+• Any machine learning purpose
+• Any artificial intelligence research
+• Any automated knowledge extraction
+
+without prior written authorization from the Owner.
+
+======================================================================
+10. NO COMPETITIVE USE
+======================================================================
+
+The Software may not be used, directly or indirectly, for the purpose
+of developing, improving, evaluating, marketing, supporting, or
+operating any product or service that competes with MAGENAIS.
+
+This restriction includes, but is not limited to:
+
+• Competitive Analysis
+• Competitive Benchmarking
+• Feature Replication
+• Architecture Replication
+• Workflow Replication
+• Plugin Replication
+• API Replication
+• User Interface Replication
+• Design Replication
+• Functional Replication
+
+The Owner reserves all rights to pursue legal remedies against
+competitive misuse.
+
+======================================================================
+11. REVERSE ENGINEERING
+======================================================================
+
+Except where prohibited by applicable law, you may NOT:
+
+• Reverse Engineer
+• Decompile
+• Disassemble
+• Analyze
+• Inspect
+• Reconstruct
+• Recreate
+• Emulate
+• Replicate
+• Derive
+• Discover
+• Extract
+
+the Software's:
+
+• Architecture
+• Algorithms
+• Internal Logic
+• Workflows
+• Routing Systems
+• AI Pipelines
+• APIs
+• SDKs
+• Plugin Interfaces
+• Technical Designs
+
+or otherwise attempt to discover confidential implementation details.
+
+======================================================================
+12. COMMERCIAL LICENSING
+======================================================================
+
+Commercial use of the Software is prohibited unless separately licensed
+by the Owner.
+
+Commercial licensing options may include, without limitation:
+
+• Enterprise License
+• OEM License
+• Commercial Distribution License
+• Partner License
+• Educational Institution License
+• Government License
+• Evaluation License
+• White Label License
+• Strategic Partnership Agreement
+
+All commercial licensing terms shall be governed by separate written
+agreements.
+
+======================================================================
+13. FEEDBACK
+======================================================================
+
+Any suggestions, ideas, comments, enhancement requests, bug reports,
+feedback, or recommendations voluntarily submitted regarding the
+Software may be used by the Owner without restriction and without any
+obligation to provide compensation, attribution, or ownership rights,
+unless otherwise agreed in writing.
+
+======================================================================
+14. EXPORT COMPLIANCE
+======================================================================
+
+You are solely responsible for complying with all applicable export,
+import, sanctions, trade, and technology control laws and regulations
+that apply within your jurisdiction.
+
+Nothing in this License authorizes the export or transfer of the
+Software where prohibited by applicable law.
+
+======================================================================
+15. INTELLECTUAL PROPERTY
+======================================================================
+
+The Software is protected by applicable national and international
+intellectual property laws and treaties, including but not limited to:
+
+• Copyright Laws
+• Trademark Laws
+• Patent Laws
+• Trade Secret Laws
+• Database Rights
+• Design Rights
+• Unfair Competition Laws
+• International Copyright Treaties
+• International Intellectual Property Agreements
+
+All intellectual property rights relating to the Software, whether
+registered or unregistered, remain the exclusive property of the Owner.
+
+Nothing contained in this License shall be interpreted as transferring
+ownership of any intellectual property rights.
+
+======================================================================
+16. TRADEMARKS
+======================================================================
+
+MAGENAIS™
+
+MAGENAIS Studio™
+
+MAGENAIS Operating System™
+
+MAGENAIS GENAI OS™
+
+MAGENAIS Kernel™
+
+and all associated names, logos, icons, branding, trade dress,
+visual identity, slogans, artwork, documentation, website content,
+and product names are proprietary intellectual property of the Owner.
+
+No trademark, logo, branding element, or product name may be used,
+reproduced, published, displayed, or referenced in a manner that may
+cause confusion or imply sponsorship, endorsement, affiliation, or
+authorization without prior written permission from the Owner.
+
+Nothing in this License grants any trademark license.
+
+======================================================================
+17. TERMINATION
+======================================================================
+
+Any violation of this License immediately and automatically terminates
+any permission that may have been granted.
+
+Upon termination, you must immediately:
+
+• Cease all use of the Software.
+• Permanently delete every copy of the Software.
+• Destroy all backups under your control.
+• Stop distributing any copies.
+• Stop using any derivative materials.
+• Certify deletion if requested by the Owner.
+
+Termination shall not affect any rights or remedies available to the
+Owner under applicable law.
+
+======================================================================
+18. DISCLAIMER OF WARRANTY
+======================================================================
+
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE."
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE OWNER DISCLAIMS
+ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE,
+INCLUDING, WITHOUT LIMITATION:
+
+• MERCHANTABILITY
+• FITNESS FOR A PARTICULAR PURPOSE
+• NON-INFRINGEMENT
+• TITLE
+• ACCURACY
+• RELIABILITY
+• SECURITY
+• AVAILABILITY
+• PERFORMANCE
+• COMPATIBILITY
+
+THE OWNER DOES NOT WARRANT THAT THE SOFTWARE WILL OPERATE WITHOUT
+INTERRUPTION, ERROR, OR DEFECT.
+
+YOU ASSUME ALL RISKS ARISING FROM THE USE OF THE SOFTWARE.
+
+======================================================================
+19. LIMITATION OF LIABILITY
+======================================================================
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE OWNER SHALL NOT BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE,
+OR CONSEQUENTIAL DAMAGES, INCLUDING BUT NOT LIMITED TO:
+
+• Loss of Revenue
+• Loss of Business
+• Loss of Goodwill
+• Loss of Data
+• Loss of Profits
+• Business Interruption
+• System Failure
+• Security Incidents
+• Third-Party Claims
+• Procurement of Substitute Services
+
+WHETHER ARISING UNDER CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY,
+OR ANY OTHER LEGAL THEORY, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGES.
+
+IN JURISDICTIONS WHERE LIMITATION OF LIABILITY IS NOT PERMITTED,
+LIABILITY SHALL BE LIMITED TO THE MAXIMUM EXTENT PERMITTED BY LAW.
+
+======================================================================
+20. GOVERNING LAW
+======================================================================
+
+This License shall be governed by and construed in accordance with the
+laws specified in any separate written commercial agreement between
+the parties.
+
+In the absence of such agreement, this License shall be interpreted
+under the laws determined by the court of competent jurisdiction where
+enforcement is sought.
+
+Nothing in this License limits any rights that cannot legally be
+excluded under applicable law.
+
+======================================================================
+21. CHANGES TO THIS LICENSE
+======================================================================
+
+The Owner reserves the right to modify, update, or replace this
+License for future versions of the Software.
+
+Unless otherwise agreed in writing, each version of the Software shall
+remain subject to the License distributed with that version.
+
+Continued use of future versions constitutes acceptance of the
+applicable License accompanying those versions.
+
+```text
+======================================================================
+22. ENTIRE AGREEMENT
+======================================================================
+
+This License constitutes the complete and exclusive agreement between
+the Owner and any User regarding the Software and supersedes all prior
+or contemporaneous agreements, communications, negotiations,
+representations, proposals, and understandings, whether written or oral,
+relating to the Software.
+
+No modification, amendment, waiver, or addition to this License shall be
+valid unless expressly approved in writing by the Owner.
+
+======================================================================
+23. SEVERABILITY
+======================================================================
+
+If any provision of this License is determined by a court of competent
+jurisdiction to be invalid, illegal, or unenforceable, that provision
+shall be interpreted to the maximum extent permitted by applicable law
+to reflect the original intent of the Owner.
+
+The remaining provisions shall remain valid, enforceable, and in full
+force and effect.
+
+======================================================================
+24. WAIVER
+======================================================================
+
+Failure or delay by the Owner in exercising any right or enforcing any
+provision of this License shall not constitute a waiver of such right or
+provision.
+
+No waiver shall be effective unless made expressly in writing and signed
+by the Owner.
+
+Any waiver shall apply only to the specific circumstance for which it
+was granted and shall not constitute a continuing or future waiver.
+
+======================================================================
+25. SURVIVAL
+======================================================================
+
+The following provisions shall survive the termination, expiration, or
+cancellation of this License:
+
+• Ownership
+• Reservation of Rights
+• Copyright
+• Intellectual Property
+• Confidential Information
+• AI Training Restrictions
+• Competitive Use Restrictions
+• Reverse Engineering Restrictions
+• Trademark Protection
+• Disclaimer of Warranty
+• Limitation of Liability
+• Governing Law
+• Any provision that by its nature is intended to survive termination.
+
+======================================================================
+26. TRADEMARK NOTICE
+======================================================================
+
+MAGENAIS™
+
+MAGENAIS Studio™
+
+MAGENAIS Operating System™
+
+MAGENAIS GENAI OS™
+
+and all associated names, logos, icons, graphics, branding elements,
+product names, slogans, visual identities, and related marks are
+trademarks, service marks, or trademark claims of Mehdi Alireza.
+
+Trademark registration status may vary by jurisdiction.
+
+Nothing contained in this License grants any right to use any trademark,
+logo, trade name, domain name, branding element, or other identifying
+mark without the Owner's prior written permission.
+
+======================================================================
+27. CONTACT
+======================================================================
+
+Licensing
+
+Commercial Licensing
+
+Enterprise Licensing
+
+OEM Licensing
+
+Technology Partnerships
+
+Strategic Partnerships
+
+Government Licensing
+
+Educational Licensing
+
+Investment Opportunities
+
+Business Development
+
+Legal Inquiries
+
+For all licensing, commercial, legal, investment, partnership, or
+technology-related matters, contact:
+
+Email:
+
+magenais.wisdom@gmail.com
+
+======================================================================
+28. FINAL NOTICE
+======================================================================
+
+MAGENAIS represents years of independent research, software engineering,
+system architecture, and intellectual property development.
+
+The Software is proprietary and confidential.
+
+It is licensed—not sold.
+
+No rights are granted except those expressly provided in a separate
+written agreement signed by the Owner.
+
+Any unauthorized use, copying, disclosure, modification, redistribution,
+commercial exploitation, reverse engineering, competitive use, or AI
+training involving any part of the Software may result in civil and
+criminal liability under applicable laws.
+
+The Owner expressly reserves every right, remedy, and protection
+available under applicable copyright, trademark, patent, trade secret,
+contract, unfair competition, and intellectual property laws worldwide.
+
+======================================================================
+LICENSE IDENTIFIER
+======================================================================
+
+License Name:
+MAGENAIS Proprietary Software License
+
+License Identifier:
+MAGENAIS-Proprietary-2.0
+
+Version:
+2.0
+
+Effective Date:
+July 27, 2026
+
+======================================================================
+COPYRIGHT
+======================================================================
+
+Copyright © 2026 Mehdi Alireza.
+
+MAGENAIS™
+
+MAGENAIS Studio™
+
+MAGENAIS Operating System™
+
+MAGENAIS GENAI OS™
+
+All Rights Reserved.
+
+======================================================================
+END OF LICENSE
+======================================================================
+```
