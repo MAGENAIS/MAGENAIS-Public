@@ -13,9 +13,22 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.1.4/tesseract.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+  <!-- Pre-set BEFORE the SDK script below loads, so it takes effect from
+       the SDK's very first line rather than racing it — Puter's SDK reads
+       this to decide whether to print its own ASCII-art banner and
+       "submit this app" console messages on load (its own documented
+       config point, not something this app is guessing at: the SDK's own
+       console output literally says "To disable this message: puter.quiet
+       = true"). This does NOT suppress the browser's own DevTools network
+       log for Puter's ambient anonymous-session check (a 401 on `whoami`
+       and a WebSocket attempt) — those are the browser's native logging of
+       an HTTP/WebSocket response, not something any page-level JS flag can
+       hide, and are expected/harmless for a visitor who isn't logged into
+       Puter (the app still works in that case; see PuterAdapter.ts). -->
+  <script>window.puter = { quiet: true };</script>
   <script defer src="https://js.puter.com/v2/"></script>
   <!-- Vite will inject the main script -->
-  <script type="module" crossorigin src="/MAGENAIS-Public/assets/main-CVkVETV2.js"></script>
+  <script type="module" crossorigin src="/MAGENAIS-Public/assets/main-Dym-QKQR.js"></script>
   <link rel="stylesheet" crossorigin href="/MAGENAIS-Public/assets/main-C6CXZCWq.css">
 </head>
 <body>
