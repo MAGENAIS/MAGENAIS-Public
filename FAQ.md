@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="branding/banner.png" alt="MAGENAIS Banner" width="100%">
+  <img src="branding/footer-banner.png" alt="MAGENAIS Banner" width="100%">
 </p>
 
 # Frequently Asked Questions (FAQ)
