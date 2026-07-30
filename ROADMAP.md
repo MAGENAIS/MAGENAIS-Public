@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="branding/intro-banner.png" alt="MAGENAIS Banner" width="100%">
+  <img src="branding/banner.png" alt="MAGENAIS Banner" width="100%">
 </p>
 # MAGENAIS Roadmap
 
