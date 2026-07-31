@@ -1,8 +1,3 @@
-<p align="center">
-  <img src="branding/banner.png" alt="MAGENAIS Banner" width="100%">
-</p>
-
-
 # MAGENAIS Roadmap
 
 > **Where Every Intelligence Works Together.**

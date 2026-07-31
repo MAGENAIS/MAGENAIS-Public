@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="branding/footer-banner.png" alt="MAGENAIS Banner" width="100%">
-</p>
-
 # Frequently Asked Questions (FAQ)
 
 This document answers some of the most common questions about MAGENAIS.

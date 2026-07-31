@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="branding/intro-banner.png" alt="MAGENAIS Banner" width="100%">
-</p>
-
 # MAGENAIS Vision
 
 > **Where Every Intelligence Works Together.**
