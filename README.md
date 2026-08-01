@@ -993,9 +993,7 @@ Professional support, consulting services, and enterprise assistance may become 
 
 **Email:** Magenais.Wisdom@gmail.com
 
-**GitHub:** https://github.com/MAGENAIS/MAGENAIS
-
-**Website:** Coming Soon
+**GitHub:** https://github.com/MAGENAIS/MAGENAIS-Public
 
 ---
 
