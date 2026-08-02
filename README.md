@@ -604,6 +604,27 @@ This architecture enables resilient AI execution while remaining completely inde
 
 ---
 
+# AI Performance Dashboard
+
+Choosing a provider is one problem. Knowing whether that choice is actually working is another.
+
+MAGENAIS includes a built-in AI Performance Dashboard that turns every request the Provider Manager already makes into a live, inspectable record — without adding extra AI calls, background benchmarking, or continuous polling of its own.
+
+The dashboard surfaces:
+
+- Real-Time Provider Metrics
+- Success Rate & Failure Tracking
+- Latency & Response Time Trends
+- Pipeline Execution Summaries
+- Per-Request Parameter Inspection
+- Local AI Runtime Diagnostics
+- Session History
+- Full JSON & CSV Export
+
+Because it's built directly on the same execution data the Provider Manager and Smart Router already produce, the dashboard reflects exactly how MAGENAIS is routing and executing requests on your device — not a simulated or idealized view of it.
+
+---
+
 # Workflow Engine
 
 Modern AI applications increasingly require intelligent orchestration rather than isolated prompts.
