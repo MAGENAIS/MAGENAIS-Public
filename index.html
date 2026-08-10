@@ -5,30 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="/MAGENAIS-Public/favicon.png" />
   <title>MAGENAIS – GEN AI OS</title>
-  <!-- Same CDN libraries the legacy monolith used for doc extraction, spreadsheet
-       parsing, charting, and no-key text/speech — kept as plain globals rather than
-       npm deps so the client bundle stays small and these modules load lazily. -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.7.0/mammoth.browser.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.1.4/tesseract.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
-  <!-- Pre-set BEFORE the SDK script below loads, so it takes effect from
-       the SDK's very first line rather than racing it — Puter's SDK reads
-       this to decide whether to print its own ASCII-art banner and
-       "submit this app" console messages on load (its own documented
-       config point, not something this app is guessing at: the SDK's own
-       console output literally says "To disable this message: puter.quiet
-       = true"). This does NOT suppress the browser's own DevTools network
-       log for Puter's ambient anonymous-session check (a 401 on `whoami`
-       and a WebSocket attempt) — those are the browser's native logging of
-       an HTTP/WebSocket response, not something any page-level JS flag can
-       hide, and are expected/harmless for a visitor who isn't logged into
-       Puter (the app still works in that case; see PuterAdapter.ts). -->
+  <!-- PERFORMANCE FIX (startup): pdf.js, mammoth.js, xlsx.js, tesseract.js,
+       chart.js and Puter.js are each only needed by one specific
+       tab/feature (Documents, Data Analytics, Puter-backed providers) —
+       loading all of them unconditionally on every page load, even for
+       someone who only ever uses the Text tab, was pure dead weight (real
+       parse/download cost before the UI was even interactive). They are no
+       longer referenced here at all; each is now loaded on demand via
+       core/ScriptLoader.ts's loadScriptOnce() the moment a tab/adapter
+       actually needs it — see legacy/doc.ts, legacy/data.ts, DataMode.ts,
+       and PuterAdapter.ts. -->
+  <!-- Pre-set so it's already in place by the time Puter's SDK is lazily
+       loaded — Puter's SDK reads this to decide whether to print its own
+       ASCII-art banner and "submit this app" console messages on load (its
+       own documented config point, not something this app is guessing at:
+       the SDK's own console output literally says "To disable this
+       message: puter.quiet = true"). This does NOT suppress the browser's
+       own DevTools network log for Puter's ambient anonymous-session check
+       (a 401 on `whoami` and a WebSocket attempt) — those are the
+       browser's native logging of an HTTP/WebSocket response, not
+       something any page-level JS flag can hide, and are expected/harmless
+       for a visitor who isn't logged into Puter (the app still works in
+       that case; see PuterAdapter.ts). Cheap enough (a single object
+       literal) to set unconditionally at startup even though the SDK
+       itself now loads lazily. -->
   <script>window.puter = { quiet: true };</script>
-  <script defer src="https://js.puter.com/v2/"></script>
   <!-- Vite will inject the main script -->
-  <script type="module" crossorigin src="/MAGENAIS-Public/assets/main-CjAZ5pMH.js"></script>
+  <script type="module" crossorigin src="/MAGENAIS-Public/assets/main-DBYZUG4S.js"></script>
   <link rel="stylesheet" crossorigin href="/MAGENAIS-Public/assets/main-B26zdJZE.css">
 </head>
 <body>

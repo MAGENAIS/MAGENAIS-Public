@@ -1,0 +1,26 @@
+import{o as e}from"./main-DBYZUG4S.js";import{t}from"./Mode-BgvjniyV.js";var n=class extends t{uploadedFile=null;activate(){this.renderControl(`
+      <div class="field">
+        <label class="field-label">Upload document</label>
+        <div class="dropzone" id="docDropzone">
+          <div class="dz-icon">⎘</div>
+          <div class="dz-text">Click or drag a PDF, Word doc, or image</div>
+          <div class="dz-sub">Parsed entirely in your browser — never uploaded anywhere</div>
+        </div>
+        <input type="file" id="docFileInput" accept=".pdf,.docx,.doc,.png,.jpg,.jpeg,.webp" style="display:none;">
+        <div id="docFileChip"></div>
+      </div>
+      <div class="field">
+        <label class="field-label">What do you want?</label>
+        <div class="chip-group" id="docActionChips">
+          <span class="chip active" data-val="summary">Summary</span>
+          <span class="chip" data-val="qa">Answer a question</span>
+        </div>
+      </div>
+      <div class="field" id="docQuestionField" style="display:none;">
+        <label class="field-label">Your question</label>
+        <textarea id="promptInput" rows="3" placeholder="e.g. What does section 3 say about liability?"></textarea>
+      </div>
+      <p class="hint">PDF text via PDF.js, Word via Mammoth.js, images via Tesseract.js OCR — all client-side. Extracted text is then processed through the text AI pipeline.</p>
+      ${this.renderPipelineHint(`text`)}
+      <button class="run-btn" id="runBtn">▸ Process Document</button>
+    `),this.wireDropzone(),document.querySelectorAll(`#docActionChips .chip`).forEach(e=>{e.addEventListener(`click`,()=>{document.querySelectorAll(`#docActionChips .chip`).forEach(e=>e.classList.remove(`active`)),e.classList.add(`active`);let t=e.dataset.val===`qa`,n=document.getElementById(`docQuestionField`);n&&(n.style.display=t?``:`none`)})}),document.getElementById(`runBtn`)?.addEventListener(`click`,()=>this.runGuarded(`runBtn`,()=>this.handleRun()))}wireDropzone(){let e=document.getElementById(`docDropzone`),t=document.getElementById(`docFileInput`);e.addEventListener(`click`,()=>t.click()),t.addEventListener(`change`,()=>{t.files&&t.files[0]&&this.setFile(t.files[0])}),e.addEventListener(`dragover`,t=>{t.preventDefault(),e.classList.add(`drag`)}),e.addEventListener(`dragleave`,()=>e.classList.remove(`drag`)),e.addEventListener(`drop`,t=>{t.preventDefault(),e.classList.remove(`drag`),t.dataTransfer?.files[0]&&this.setFile(t.dataTransfer.files[0])})}setFile(e){this.uploadedFile=e;let t=document.getElementById(`docFileChip`);t.innerHTML=`<div class="file-chip"><span>${e.name}</span><button title="Remove">×</button></div>`,t.querySelector(`button`)?.addEventListener(`click`,()=>{this.uploadedFile=null,t.innerHTML=``})}async handleRun(){if(!this.uploadedFile){alert(`Upload a document first.`);return}let e=document.querySelector(`#docActionChips .chip.active`)?.dataset.val||`summary`,t=document.getElementById(`promptInput`)?.value.trim();if(e===`qa`&&!t){alert(`Enter your question.`);return}this.outputPanel.querySelector(`.stage`)&&this.renderLoading(`Extracting text…`);let n={id:`doc-`+Date.now(),name:`Document Processing`,graph:{nodes:[{id:`doc1`,type:`doc`,label:`Document Processor`,config:{action:e===`qa`?`summary`:e,question:e===`qa`?t:void 0},inputs:{file:this.uploadedFile},enabled:!0}],edges:[]},createdAt:Date.now(),updatedAt:Date.now()};try{let r=(await this.kernel.getWorkflowEngine().execute(n,{file:this.uploadedFile},(e,t)=>this.appendLog(e,t))).finalOutput;this.renderResult(r,e===`qa`?t:void 0),this.kernel.getStore().getActions().addHistoryEntry({mode:`doc`,prompt:e===`qa`?t:`[${this.uploadedFile.name}] summary`,result:typeof r==`string`?r:r?.summary,resultType:`text`})}catch(e){this.renderError(e)}}renderResult(t,n){let r=this.outputPanel.querySelector(`.stage`);if(!r)return;let i=typeof t==`string`?t:t?.extractedText,a=typeof t==`string`?null:t?.summary,o=typeof t==`string`?null:t?.summaryError,s=``;n&&(s+=`<p class="field-label">Question</p><div class="doc-summary-block" style="margin-bottom:14px;"><div class="result-text">${this.escapeHtml(n)}</div></div>`),a?s+=`<p class="field-label">${n?`Answer`:`Summary`}</p><div class="doc-summary-block" style="margin-bottom:18px;"><div class="result-text">${this.renderMarkdown(a)}</div>${this.renderReadAloudBlock(e(a),n?`Read Answer Aloud`:`Read Summary Aloud`)}</div>`:o&&(s+=`<div class="doc-summary-block" style="margin-bottom:18px; border-left: 3px solid var(--warn, #d97706); padding-left:12px;"><p class="field-label" style="color:var(--warn, #d97706);">${n?`Answer`:`Summary`} unavailable</p><div class="result-text" style="opacity:0.85;">Text extraction succeeded, but AI processing failed: ${o}. The extracted text below is still available.</div></div>`),i&&(s+=`<details class="adv"><summary>Extracted text (${i.length.toLocaleString()} characters)</summary><div class="adv-body"><div class="result-text" style="white-space:pre-wrap; max-height:340px; overflow:auto;">${this.escapeHtml(i.slice(0,2e4))}</div></div></details>`),r.innerHTML=s||`<div class="empty-text">No text could be extracted.</div>`,this.wireReadAloudControls(),this.wireCodeCopyButtons(r)}deactivate(){typeof window<`u`&&window.speechSynthesis&&window.speechSynthesis.cancel()}getTitle(){return`Documents`}};export{n as DocMode};
