@@ -1,4 +1,4 @@
-import{t as e}from"./Mode-DuooQ1Rf.js";var t=class extends e{activate(){this.renderControl(`
+import{t as e}from"./Mode-CCJuyZDZ.js";var t=class extends e{activate(){this.renderControl(`
       <div class="field">
         <label class="field-label">Prompt</label>
         <textarea id="promptInput" rows="5" placeholder="A drone shot slowly rising over a misty mountain valley..."></textarea>
