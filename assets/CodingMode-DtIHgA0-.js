@@ -1,4 +1,4 @@
-import{t as e}from"./Mode-BgvjniyV.js";var t=[`JavaScript`,`TypeScript`,`HTML/CSS/JS (Web)`,`Python`,`Java`,`C`,`C++`,`C#`,`Go`,`Rust`,`PHP`,`Swift`,`Kotlin`,`SQL`,`Bash`],n=class extends e{activate(){this.renderControl(`
+import{t as e}from"./Mode-V8wQnPNZ.js";var t=[`JavaScript`,`TypeScript`,`HTML/CSS/JS (Web)`,`Python`,`Java`,`C`,`C++`,`C#`,`Go`,`Rust`,`PHP`,`Swift`,`Kotlin`,`SQL`,`Bash`],n=class extends e{activate(){this.renderControl(`
       <div class="field">
         <label class="field-label">What do you want to build?</label>
         <textarea id="promptInput" rows="6" placeholder="e.g. A function that validates an email address, with unit tests."></textarea>
