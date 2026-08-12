@@ -1,4 +1,4 @@
-import{t as e}from"./Mode-CJtHVb22.js";var t=class extends e{lastGameCode=null;activate(){this.renderControl(`
+import{t as e}from"./Mode-BiZxIkxj.js";var t=class extends e{lastGameCode=null;activate(){this.renderControl(`
       <div class="field">
         <label class="field-label">Game concept</label>
         <textarea id="promptInput" rows="5" placeholder="e.g. A top-down strategy game where you place towers to defend a base from waves of enemies."></textarea>

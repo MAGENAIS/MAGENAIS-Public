@@ -1,4 +1,4 @@
-import{t as e}from"./Mode-CJtHVb22.js";var t=class extends e{sourceImageUrl=null;sourceImageLabel=null;activate(){this.renderControl(`
+import{t as e}from"./Mode-BiZxIkxj.js";var t=class extends e{sourceImageUrl=null;sourceImageLabel=null;activate(){this.renderControl(`
       <div class="field">
         <label class="field-label">Prompt <span id="promptLabelSuffix" style="text-transform:none;color:var(--ink-faint);"></span></label>
         <textarea id="promptInput" rows="5" placeholder="A low-poly Achaemenid palace at golden hour..."></textarea>
