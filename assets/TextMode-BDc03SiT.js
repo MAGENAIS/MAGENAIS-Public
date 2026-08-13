@@ -1,4 +1,4 @@
-import{o as e}from"./main-Cao6vFuE.js";import{t}from"./Mode-ryRrBnNo.js";import{t as n}from"./VoiceInput-CvaLwtaL.js";var r=class extends t{promptInput=null;activate(){this.renderControl(`
+import{o as e}from"./main-BM1AItJZ.js";import{t}from"./Mode-CzLArzAU.js";import{t as n}from"./VoiceInput-CvaLwtaL.js";var r=class extends t{promptInput=null;activate(){this.renderControl(`
       <div class="field">
         <label class="field-label">Prompt <span style="text-transform:none;letter-spacing:0;">tap mic to speak it</span></label>
         <textarea id="promptInput" rows="6" placeholder="Write a short story..."></textarea>
