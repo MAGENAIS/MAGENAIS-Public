@@ -1,0 +1,1 @@
+var e={text:`prompt`,image:`prompt`,video:`prompt`,music:`prompt`,coding:`prompt`,gamegen:`concept`,research:`query`,agents:`task`,autonomous:`imageBase64`,vision:`prompt`,speech:`text`,audio:`audio`};export{e as t};

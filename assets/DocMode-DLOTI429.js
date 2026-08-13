@@ -1,4 +1,4 @@
-import{o as e}from"./main-BM1AItJZ.js";import{t}from"./Mode-CzLArzAU.js";var n=class extends t{uploadedFile=null;activate(){this.renderControl(`
+import{u as e}from"./main-N2xr38iN.js";import{t}from"./Mode-Bm6SiWub.js";var n=class extends t{uploadedFile=null;activate(){this.renderControl(`
       <div class="field">
         <label class="field-label">Upload document</label>
         <div class="dropzone" id="docDropzone">
