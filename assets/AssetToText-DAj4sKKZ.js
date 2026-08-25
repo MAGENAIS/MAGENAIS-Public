@@ -1,0 +1,11 @@
+function e(e){let t=e.data;if(typeof t==`string`)return t;if(t==null)return``;switch(e.type){case`research`:{let{summary:e,papers:n}=t,r=e?`${e}\n\n`:``;if(n?.length){r+=`## Sources
+
+`;for(let e of n)r+=`- **${e.title||`Untitled`}** — ${e.authors||`Unknown authors`} (${e.year||`n.d.`})${e.url?` — ${e.url}`:``}\n`}return r||JSON.stringify(t,null,2)}case`agent`:{let{goal:e,steps:n,summary:r}=t,i=e?`## Goal\n\n${e}\n\n`:``;return r&&(i+=`## Summary\n\n${typeof r==`string`?r:JSON.stringify(r,null,2)}\n\n`),n?.length&&(i+=`## Steps
+
+`,n.forEach((e,t)=>{let n=e.label||e.nodeId||`Step ${t+1}`,r=typeof e.output==`string`?e.output:JSON.stringify(e.output);i+=`### ${t+1}. ${n}\n\n${r}\n\n`})),i||JSON.stringify(t,null,2)}case`data`:{let{headers:e,rows:n,profile:r,charts:i}=t,a=``;if(i?.length){a+=`## Visualizations
+
+`;for(let e of i)a+=`![${e.title}](${e.dataUrl})\n\n`}if(r){a+=`## Data Profile\n\n${r.rowCount} rows × ${r.columnCount} columns.\n\n`,a+=`| Column | Type | Unique | Missing | Details |
+| --- | --- | --- | --- | --- |
+`;for(let e of r.columns){let t=[];e.numericRange&&t.push(`range ${e.numericRange.min}–${e.numericRange.max}, avg ${Math.round(e.numericRange.avg*100)/100}`),e.temporalRange&&t.push(`${e.temporalRange.min} to ${e.temporalRange.max}`),e.topCategories?.length&&t.push(`top: ${e.topCategories.slice(0,3).map(e=>e.value).join(`, `)}`),a+=`| ${e.name} | ${e.type} | ${e.uniqueCount} | ${e.missingCount} | ${t.join(`; `)||`—`} |\n`}a+=`
+`}if(e?.length&&n?.length){a+=`## Data Preview (first ${Math.min(50,n.length)} of ${n.length} rows)\n\n`,a+=`| ${e.join(` | `)} |\n| ${e.map(()=>`---`).join(` | `)} |\n`;for(let e of n.slice(0,50))a+=`| ${e.map(e=>String(e??``).replace(/\|/g,`\\|`)).join(` | `)} |\n`}return a||JSON.stringify(t,null,2)}case`quantum`:{let{circuit:e,qasm:n,counts:r,shots:i}=t,a=``;if(r){a+=`## Measurement Results${i?` (${i} shots)`:``}\n\n| Outcome | Count |\n| --- | --- |\n`;for(let[e,t]of Object.entries(r))a+=`| ${e} | ${t} |\n`;a+=`
+`}return n&&(a+=`## OpenQASM\n\n\`\`\`\n${n}\n\`\`\`\n\n`),e&&!n&&(a+=`## Circuit\n\n\`\`\`\n${JSON.stringify(e,null,2)}\n\`\`\`\n`),a||JSON.stringify(t,null,2)}case`vision`:{let{description:e}=t;return e||JSON.stringify(t,null,2)}default:return JSON.stringify(t,null,2)}}export{e as assetToExportText};
