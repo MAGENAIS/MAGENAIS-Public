@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="branding/intro-banner.png" alt="MAGENAIS Banner" width="100%">
+  <img src="branding/banner.png" alt="MAGENAIS Banner" width="100%">
 </p>
 
 <h1 align="center">MAGENAIS™</h1>
@@ -308,6 +308,16 @@ Core platform services include:
 Rather than switching between multiple AI applications, users interact with one intelligent platform capable of orchestrating every supported capability through a consistent user experience.
 
 This architecture allows MAGENAIS to evolve alongside the rapidly changing AI ecosystem while maintaining long-term compatibility and architectural stability.
+
+---
+
+# Studio Desktop: Core AI & Intelligence
+
+Studio is the default landing tab. It works like a desktop of icons for every MAGENAIS capability. Icons are organized into two groups.
+
+**Core AI** — one icon per capability (Text, Image, Video, Audio, Documents, Data Analytics, Research, Coding, Vision, Agents, Autonomous, Robotics, Quantum, and more). Each icon opens that capability's full mode directly.
+
+**Intelligence** — Problem Solver, Decision Intelligence, Knowledge, Verification, Diagnosis, Inspection, and Optimization. These tools help decide which capability a goal actually needs.
 
 ---
 

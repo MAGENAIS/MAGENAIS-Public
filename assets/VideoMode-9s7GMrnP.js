@@ -1,4 +1,4 @@
-import{t as e}from"./Mode-D11W5XNf.js";var t=class extends e{sourceImageUrl=null;sourceImageLabel=null;activate(){this.renderControl(`
+import{t as e}from"./Mode-BWw8Ks99.js";var t=class extends e{sourceImageUrl=null;sourceImageLabel=null;activate(){this.renderControl(`
       <div class="field">
         <label class="field-label">Prompt <span id="promptLabelSuffix" style="text-transform:none;color:var(--ink-faint);"></span></label>
         <textarea id="promptInput" rows="5" placeholder="A drone shot slowly rising over a misty mountain valley..."></textarea>
