@@ -1,4 +1,4 @@
-import{t as e}from"./Mode-BWw8Ks99.js";var t=[`H`,`X`,`Y`,`Z`,`S`,`T`],n=[`RX`,`RY`,`RZ`],r=class extends e{numQubits=2;ops=[];shots=1024;activeTab=`build`;activate(){this.renderControl(this.controlMarkup()),this.wireTabs(),this.wireBuildControls(),this.wireAiControls(),this.renderCircuitStage()}deactivate(){}getTitle(){return`Quantum`}controlMarkup(){return`
+import{t as e}from"./Mode-BgC9PqDe.js";var t=[`H`,`X`,`Y`,`Z`,`S`,`T`],n=[`RX`,`RY`,`RZ`],r=class extends e{numQubits=2;ops=[];shots=1024;activeTab=`build`;activate(){this.renderControl(this.controlMarkup()),this.wireTabs(),this.wireBuildControls(),this.wireAiControls(),this.renderCircuitStage()}deactivate(){}getTitle(){return`Quantum`}controlMarkup(){return`
       <div class="field">
         <div class="chip-group" id="quantumTabs" role="tablist" aria-label="Quantum tools">
           <button class="chip active" data-tab="build" role="tab" aria-selected="true">Circuit Builder</button>
