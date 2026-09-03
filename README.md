@@ -171,6 +171,20 @@ This modular architecture enables continuous evolution without disrupting the re
 
 ---
 
+## 🗣 Symbiosis: Multi-AI Discussion Council
+
+Symbiosis is the second core tab, alongside Studio. Instead of a single AI answering a prompt, it runs a structured, multi-round discussion where several AI participants — either different providers/models, or several distinct roles (e.g. Skeptic, Engineer, Innovator) on one provider — each take a turn responding, seeing and building on what the others said before them. A human can join in at any point with their own contribution.
+
+Key capabilities include:
+
+- Multi-Provider and Multi-Role council modes
+- Human contributions mid-discussion (text, voice, file, or URL)
+- Per-participant pause / resume / retry / skip
+- AI-generated discussion summary
+- Export to Word, PDF, TXT, Markdown, and JSON, with full LaTeX math support
+
+---
+
 ## 🖥 Hybrid AI Execution
 
 MAGENAIS is designed to intelligently combine multiple execution environments within a single workflow.
