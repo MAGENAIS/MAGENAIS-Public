@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="branding/intro-banner.png" alt="MAGENAIS Banner" width="100%">
+  <img src="branding/banner.png" alt="MAGENAIS Banner" width="100%">
 </p>
 
 <h1 align="center">MAGENAIS™</h1>
@@ -182,6 +182,20 @@ Key capabilities include:
 - Per-participant pause / resume / retry / skip
 - AI-generated discussion summary
 - Export to Word, PDF, TXT, Markdown, and JSON, with full LaTeX math support
+
+---
+
+## 🧠 Models Hub: Independent Analytical Models
+
+Models Hub is MAGENAIS's library of explainable, local-first analytical models — distinct from the general-purpose text/image/video/etc. AI providers used elsewhere in the platform. Each model ships as its own independent, open-source repository, discovered through a shared public catalog, and runs entirely on-device: no API key, no account, and no cloud dependency required. Every result comes with a plain-language explanation and a research-oriented stability or confidence metric, not just a bare number.
+
+The initial release includes three models:
+
+- **DecisionScore** — multi-criteria decision ranking, reported with a Decision Stability Index and Decision Flip Point showing how robust the recommendation actually is
+- **PatternSense** — correlation and pattern detection across tabular data, scored with a Pattern Transfer Score so a pattern is only trusted once it holds up across the dataset
+- **AnomalyMind** — anomaly detection with an Anomaly Context Stability score distinguishing clear, unambiguous anomalies from borderline, threshold-sensitive ones
+
+Models Hub is designed to grow. Because each model is its own repository and self-describes through a shared manifest and catalog entry, adding a new model never requires changing MAGENAIS's core — only publishing the model and registering it in the catalog. Expect this library to keep expanding over time.
 
 ---
 
