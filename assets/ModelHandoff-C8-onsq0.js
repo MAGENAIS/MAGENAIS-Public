@@ -1,0 +1,1 @@
+var e=null;function t(){let t=e;return e=null,t}function n(e){e.getEventBus().emit(`studio:openMode`,`models`)}function r(t,r){e=r,n(t)}export{r as n,t};

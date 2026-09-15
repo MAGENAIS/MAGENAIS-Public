@@ -1,0 +1,27 @@
+function e(e){let n=e.data;if(typeof n==`string`)return n;if(n==null)return``;switch(e.type){case`research`:{let{summary:e,papers:t}=n,r=e?`${e}\n\n`:``;if(t?.length){r+=`## Sources
+
+`;for(let e of t)r+=`- **${e.title||`Untitled`}** — ${e.authors||`Unknown authors`} (${e.year||`n.d.`})${e.url?` — ${e.url}`:``}\n`}return r||JSON.stringify(n,null,2)}case`agent`:{let{goal:e,steps:t,summary:r}=n,i=e?`## Goal\n\n${e}\n\n`:``;return r&&(i+=`## Summary\n\n${typeof r==`string`?r:JSON.stringify(r,null,2)}\n\n`),t?.length&&(i+=`## Steps
+
+`,t.forEach((e,t)=>{let n=e.label||e.nodeId||`Step ${t+1}`,r=typeof e.output==`string`?e.output:JSON.stringify(e.output);i+=`### ${t+1}. ${n}\n\n${r}\n\n`})),i||JSON.stringify(n,null,2)}case`data`:{if(n&&typeof n.model==`string`&&n.output!==void 0)return t(n);let{headers:e,rows:r,profile:i,charts:a}=n,o=``;if(a?.length){o+=`## Visualizations
+
+`;for(let e of a)o+=`![${e.title}](${e.dataUrl})\n\n`}if(i){o+=`## Data Profile\n\n${i.rowCount} rows × ${i.columnCount} columns.\n\n`,o+=`| Column | Type | Unique | Missing | Details |
+| --- | --- | --- | --- | --- |
+`;for(let e of i.columns){let t=[];e.numericRange&&t.push(`range ${e.numericRange.min}–${e.numericRange.max}, avg ${Math.round(e.numericRange.avg*100)/100}`),e.temporalRange&&t.push(`${e.temporalRange.min} to ${e.temporalRange.max}`),e.topCategories?.length&&t.push(`top: ${e.topCategories.slice(0,3).map(e=>e.value).join(`, `)}`),o+=`| ${e.name} | ${e.type} | ${e.uniqueCount} | ${e.missingCount} | ${t.join(`; `)||`—`} |\n`}o+=`
+`}if(e?.length&&r?.length){o+=`## Data Preview (first ${Math.min(50,r.length)} of ${r.length} rows)\n\n`,o+=`| ${e.join(` | `)} |\n| ${e.map(()=>`---`).join(` | `)} |\n`;for(let e of r.slice(0,50))o+=`| ${e.map(e=>String(e??``).replace(/\|/g,`\\|`)).join(` | `)} |\n`}return o||JSON.stringify(n,null,2)}case`quantum`:{let{circuit:e,qasm:t,counts:r,shots:i}=n,a=``;if(r){a+=`## Measurement Results${i?` (${i} shots)`:``}\n\n| Outcome | Count |\n| --- | --- |\n`;for(let[e,t]of Object.entries(r))a+=`| ${e} | ${t} |\n`;a+=`
+`}return t&&(a+=`## OpenQASM\n\n\`\`\`\n${t}\n\`\`\`\n\n`),e&&!t&&(a+=`## Circuit\n\n\`\`\`\n${JSON.stringify(e,null,2)}\n\`\`\`\n`),a||JSON.stringify(n,null,2)}case`vision`:{let{description:e}=n;return e||JSON.stringify(n,null,2)}default:return JSON.stringify(n,null,2)}}function t(e){let{model:t,modelVersion:a,naturalLanguageRequest:o,input:s,output:c}=e,l=`## ${t}${a?` (v${a})`:``}\n\n`;o&&(l+=`**Request:** ${o}\n\n`),t.includes(`decision-score`)?l+=n(c,s):t.includes(`pattern-sense`)?l+=r(c):t.includes(`anomaly-mind`)?l+=i(c):l+=`### Result\n\n\`\`\`\n${JSON.stringify(c,null,2)}\n\`\`\`\n\n`;let u=e.aiSuggestions;if(u&&(u.insights?.length||u.considerations?.length||u.questions?.length||u.nextSteps?.length)){l+=`### AI Suggestions${u.unverified?` (unverified — not part of the deterministic result)`:``}\n\n`;let e=(e,t)=>t?.length?`**${e}**\n\n${t.map(e=>`- ${e}`).join(`
+`)}\n\n`:``;l+=e(`Insights`,u.insights),l+=e(`Considerations`,u.considerations),l+=e(`Questions`,u.questions),l+=e(`Next steps`,u.nextSteps)}return l}function n(e,t){if(!e?.ranking)return``;let n=[...e.ranking].sort((e,t)=>e.rank-t.rank),r=n.find(t=>t.optionId===e.topOptionId)||n[0],i=``;r&&(i+=`**Recommendation:** ${r.name||r.optionId} — score ${Number(r.score).toFixed(3)}\n\n`),i+=`### Ranking
+
+| Rank | Option | Score |
+| --- | --- | --- |
+`;for(let e of n)i+=`| ${e.rank} | ${e.name||e.optionId} | ${Number(e.score).toFixed(3)} |\n`;if(i+=`
+`,typeof e.dsi==`number`&&(i+=`**Decision Stability Index:** ${Math.round(e.dsi*100)}% — proportion of tested weight changes where the top choice stayed the same.\n\n`),e.dfp?.length){i+=`### Decision Flip Point — sensitivity by criterion
+
+| Criterion | Direction | Change to flip | Challenger |
+| --- | --- | --- | --- |
+`;for(let t of e.dfp)i+=`| ${t.criterionName||t.criterionId} | ${t.direction} | ${t.relativeChange===null?`not found in range`:(t.relativeChange*100).toFixed(1)+`%`} | ${t.challengerOptionId||`—`} |\n`;i+=`
+`}return t?.constraints?.length&&(i+=`### Constraints (context only, not numerically enforced)\n\n${t.constraints.map(e=>`- ${e}`).join(`
+`)}\n\n`),i}function r(e){if(!e)return``;if(!e.patterns?.length)return`No patterns above threshold were found among ${e.variablesConsidered?.length??0} variable(s) across ${e.rowCount??0} rows.\n\n`;let t=`### Patterns (${e.rowCount} rows)\n\n| Variables | Kind | Direction | Strength | Confidence | Support | PTS |\n| --- | --- | --- | --- | --- | --- | --- |\n`;for(let n of e.patterns)t+=`| ${n.variables[0]} ↔ ${n.variables[1]} | ${n.kind} | ${n.direction} | ${Number(n.strength).toFixed(2)} | ${Number(n.confidence).toFixed(2)} | ${n.support} | ${n.partitionConsistencyUntested?`untested`:Number(n.pts).toFixed(2)} |\n`;return t+=`
+`,e.patterns.some(e=>e.kind===`causal-hypothesis`)&&(t+=`_Causal-hypothesis patterns are still association evidence only — not proof of causation._
+
+`),t}function i(e){if(!e)return``;let t=(e.anomalies||[]).filter(e=>e.isAnomaly);if(!t.length)return`No anomalies flagged (method: ${e.method}) across ${e.rowCount} rows.\n\n`;let n=`### ${t.length} Anomal${t.length===1?`y`:`ies`} Flagged (method: ${e.method})\n\n| Row | Variable | Value | Score | ACS | Stability |\n| --- | --- | --- | --- | --- | --- |\n`;for(let e of t)n+=`| ${e.index} | ${e.variable} | ${e.value} | ${Number(e.score).toFixed(2)} | ${Number(e.acs).toFixed(2)} | ${e.stability} |\n`;return n+=`
+`,n}export{e as assetToExportText};
