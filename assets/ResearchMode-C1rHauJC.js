@@ -1,4 +1,4 @@
-import{d as e}from"./main-BYEgvKJm.js";import{t}from"./Mode-D3RD4c2D.js";import{i as n,r}from"./SymbiosisHandoff-DkpRyW56.js";var i=[{key:`semanticscholar`,label:`Semantic Scholar`},{key:`openalex`,label:`OpenAlex`},{key:`arxiv`,label:`arXiv`}],a=class extends t{activate(){this.renderControl(`
+import{d as e}from"./main-BZieeDVq.js";import{t}from"./Mode-WmBciKG1.js";import{i as n,r}from"./SymbiosisHandoff-DkpRyW56.js";var i=[{key:`semanticscholar`,label:`Semantic Scholar`},{key:`openalex`,label:`OpenAlex`},{key:`arxiv`,label:`arXiv`}],a=class extends t{activate(){this.renderControl(`
       <div class="field">
         <label class="field-label">Research question</label>
         <textarea id="promptInput" rows="4" placeholder="e.g. What's the current evidence on CRISPR-based gene therapy for sickle cell disease?"></textarea>
