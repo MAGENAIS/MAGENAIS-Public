@@ -6,6 +6,14 @@ This document records significant improvements, new capabilities, architectural 
 
 Version numbers follow Semantic Versioning where practical.
 
+## [Unreleased]
+
+### Changed
+- Models Hub: the Introduction section is now a short Target / Strategy statement and no longer names individual models.
+
+### Added
+- Models Hub: the Meta-Intelligence page now has an Example section (sample task, Copy, Run example) that replays a sample task through the in-process library and shows what it records. It plans and records only; no provider or model is called.
+
 ## [3.1.2] — 2026-09-11
 
 Maintenance / release-hardening pass. No architecture changes; no Studio

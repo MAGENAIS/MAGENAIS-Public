@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="branding/intro-banner.png" alt="MAGENAIS Banner" width="100%">
+  <img src="branding/banner.png" alt="MAGENAIS Banner" width="100%">
 </p>
 
 <h1 align="center">MAGENAIS™</h1>
@@ -189,11 +189,14 @@ Key capabilities include:
 
 Models Hub is MAGENAIS's library of explainable, local-first analytical models — distinct from the general-purpose text/image/video/etc. AI providers used elsewhere in the platform. Each model ships as its own independent, open-source repository, discovered through a shared public catalog, and runs entirely on-device: no API key, no account, and no cloud dependency required. Every result comes with a plain-language explanation and a research-oriented stability or confidence metric, not just a bare number.
 
-The initial release includes three models:
+The Models Hub currently lists four models — three runnable analytical models and one in-process library:
 
 - **DecisionScore** — multi-criteria decision ranking, reported with a Decision Stability Index and Decision Flip Point showing how robust the recommendation actually is
 - **PatternSense** — correlation and pattern detection across tabular data, scored with a Pattern Transfer Score so a pattern is only trusted once it holds up across the dataset
 - **AnomalyMind** — anomaly detection with an Anomaly Context Stability score distinguishing clear, unambiguous anomalies from borderline, threshold-sensitive ones
+- **Meta-Intelligence (V2)** — a stateful orchestrator that records a task's path from problem to strategy alternatives, DecisionScore-backed evaluation, an ACT/WAIT/ASK/SIMULATE composition boundary, an execution plan, a verified outcome, an adaptation decision and a cognitive trace, with provenance at every step. It plans and records; it never executes anything. It is used in-process as a library, so the Models Hub shows it as an information-only entry with no Run panel and it is not dispatched through the Model Router
+
+DecisionScore, PatternSense and AnomalyMind are registered in the Models Hub registry and can be run from the Models Hub tab. Meta-Intelligence is exposed through its manifest only, because it is a multi-call API rather than a single-run model.
 
 Models Hub is designed to grow. Because each model is its own repository and self-describes through a shared manifest and catalog entry, adding a new model never requires changing MAGENAIS's core — only publishing the model and registering it in the catalog. Expect this library to keep expanding over time.
 
