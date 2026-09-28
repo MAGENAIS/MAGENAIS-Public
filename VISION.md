@@ -2,7 +2,7 @@
 
 > **Where Every Intelligence Works Together.**
 
-MAGENAIS™ is a browser-first **Generative AI Operating System (GENAI OS)** designed to unify modern artificial intelligence technologies within a single intelligent, extensible, and provider-independent platform.
+MAGENAIS™ is a browser-first **Generative intelligent operating environment (COGNITIVE ECOSYSTEM)** designed to unify modern artificial intelligence technologies within a single intelligent, extensible, and provider-independent platform.
 
 Rather than focusing on a single AI model, service, or workflow, MAGENAIS provides an integrated operating environment where cloud AI services, browser-based intelligence, local AI models, multimodal capabilities, autonomous systems, intelligent workflows, and future AI technologies can cooperate through a consistent architecture.
 
@@ -12,7 +12,7 @@ MAGENAIS addresses this challenge by providing a unified platform that enables d
 
 MAGENAIS is not another AI chatbot, model wrapper, or provider-specific application.
 
-It is a comprehensive **GENAI Operating System** designed to orchestrate intelligence across diverse AI technologies and application domains.
+It is a comprehensive **Generative AI & Cognitive Ecosystem** designed to orchestrate intelligence across diverse AI technologies and application domains.
 
 ---
 
@@ -30,7 +30,7 @@ Rather than replacing existing AI providers, MAGENAIS enables them to cooperate 
 
 # Strategic Vision
 
-The long-term vision of MAGENAIS is to become one of the world's leading **Generative AI Operating Systems**, capable of integrating virtually every major category of artificial intelligence into a unified commercial platform.
+The long-term vision of MAGENAIS is to become one of the world's leading **Generative AI & Cognitive Ecosystems**, capable of integrating virtually every major category of artificial intelligence into a unified commercial platform, and designed to evolve toward increasingly capable cognitive systems as the AGI/ASI era unfolds.
 
 As the AI landscape continues to evolve, MAGENAIS is designed to evolve alongside it by supporting new providers, models, capabilities, and intelligent systems without requiring fundamental architectural redesign.
 

@@ -8,7 +8,7 @@ For detailed technical documentation, architecture guides, and product informati
 
 # What is MAGENAIS?
 
-MAGENAIS is a browser-native GENAI Operating System designed to unify modern Artificial Intelligence technologies into a single intelligent platform.
+MAGENAIS is a browser-native Generative AI & Cognitive Ecosystem designed to unify modern Artificial Intelligence technologies into a single intelligent platform.
 
 It provides a consistent environment for working with multiple AI capabilities including:
 
