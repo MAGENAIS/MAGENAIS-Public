@@ -9,6 +9,7 @@ Version numbers follow Semantic Versioning where practical.
 ## [Unreleased]
 
 ### Changed
+- Models Hub: tiles and the "Open model" list are now ordered newest / most important first: Meta-Intelligence, then AnomalyMind, PatternSense, DecisionScore.
 - Models Hub: the Introduction section is now a short Target / Strategy statement and no longer names individual models.
 
 ### Added
