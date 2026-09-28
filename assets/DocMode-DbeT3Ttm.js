@@ -1,4 +1,4 @@
-import{d as e}from"./main-BzcxF71M.js";import{t}from"./Mode-DrIDEyZT.js";import{i as n,r}from"./SymbiosisHandoff-DkpRyW56.js";var i=class extends t{uploadedFile=null;activate(){this.renderControl(`
+import{d as e}from"./main-Cy-oipGa.js";import{t}from"./Mode-BxlSiknA.js";import{i as n,r}from"./SymbiosisHandoff-DkpRyW56.js";var i=class extends t{uploadedFile=null;activate(){this.renderControl(`
       <div class="field">
         <label class="field-label">Upload document</label>
         <div class="dropzone" id="docDropzone">
