@@ -1,4 +1,4 @@
-import{_ as e,v as t}from"./main-B5clGpkV.js";import{t as n}from"./Mode-DoJ9F_Qu.js";import{i as r,r as i}from"./SymbiosisHandoff-DkpRyW56.js";var a=[`H`,`X`,`Y`,`Z`,`S`,`T`],o=[`RX`,`RY`,`RZ`],s=class extends n{numQubits=2;ops=[];shots=1024;activeTab=`build`;activate(){this.renderControl(this.controlMarkup()),this.wireTabs(),this.wireBuildControls(),this.wireAiControls(),this.renderCircuitStage()}deactivate(){}getTitle(){return`Quantum`}controlMarkup(){return`
+import{_ as e,v as t}from"./main-ysejvUnV.js";import{t as n}from"./Mode-5H0CwBAF.js";import{i as r,r as i}from"./SymbiosisHandoff-DkpRyW56.js";var a=[`H`,`X`,`Y`,`Z`,`S`,`T`],o=[`RX`,`RY`,`RZ`],s=class extends n{numQubits=2;ops=[];shots=1024;activeTab=`build`;activate(){this.renderControl(this.controlMarkup()),this.wireTabs(),this.wireBuildControls(),this.wireAiControls(),this.renderCircuitStage()}deactivate(){}getTitle(){return`Quantum`}controlMarkup(){return`
       <div class="field">
         <div class="chip-group" id="quantumTabs" role="tablist" aria-label="Quantum tools">
           <button class="chip active" data-tab="build" role="tab" aria-selected="true">Circuit Builder</button>
